@@ -280,6 +280,17 @@
 	     	]
 		})
 	};
+//! исправить разрешение картинки.
+	var imgResize = function() {
+		if ($(window).width() <= 992 ) {
+			$("#previewImg").addClass('col-md-12');
+			$("#previewImg").removeClass('col-md-6')
+		} else if (($(window).width() >= 992 )) {
+			$("#previewImg").removeClass('col-md-12');
+			$("#previewImg").removeClass('col-md-6')
+		}
+	};
+	
 
 	// Document on load.
 	$(function(){
@@ -288,17 +299,15 @@
 		counterWayPoint();
 		contentWayPoint();
 		burgerMenu();
-
 		clickMenu();
 		// navActive();
 		navigationSection();
 		// windowScroll();
-
-
 		mobileMenuOutsideClick();
 		sliderMain();
 		stickyFunction();
 		owlCrouselFeatureSlide();
+		imgResize();
 	});
 
 
